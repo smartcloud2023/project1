@@ -21,6 +21,7 @@ jobs:
   cook:
     name: cook rice
     runs-on: ubuntu-latest
+    needs: greet
     steps:
       - name: check user info
         run: |
@@ -29,6 +30,7 @@ jobs:
   Clean:
     name: clean house
     runs-on: ubuntu-latest
+    needs: cook
     steps:
       - name: check home file
         run: |
