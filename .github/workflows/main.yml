@@ -11,7 +11,6 @@ jobs:
   greet:
     name: Greet Smart
     runs-on: ubuntu-latest
-
     steps:
       - name: Check hostname
         run: |
@@ -22,11 +21,18 @@ jobs:
   cook:
     name: cook rice
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check hostname
+      - name: check user info
         run: |
           cat /etc/passwd
+
+  Clean:
+    name: clean house
+    runs-on: ubuntu-latest
+    steps:
+      - name: check home file
+        run: |
+          ls -la /home
 
   
     
