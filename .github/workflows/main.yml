@@ -10,7 +10,7 @@ permissions:
 jobs:
   greet:
     name: Greet Smart
-    runs-on: dizzy-runner
+    runs-on: secops
     steps:
       - name: Check hostname
         run: |
@@ -21,7 +21,7 @@ jobs:
           
   cook:
     name: cook rice
-    runs-on: dizzy-runner
+    runs-on: secops
     needs: greet
     steps:
       - name: check user info
@@ -31,7 +31,7 @@ jobs:
 
   Clean:
     name: clean house
-    runs-on: dizzy-runner
+    runs-on: secops
     needs: cook
     steps:
       - name: check home file
