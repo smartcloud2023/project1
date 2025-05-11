@@ -10,26 +10,28 @@ permissions:
 jobs:
   greet:
     name: Greet Smart
-    runs-on: ubuntu-latest
+    runs-on: dizzy-runner
     steps:
       - name: Check hostname
         run: |
           hostnamectl
+          cd /home/ubuntu
           mkdir smartwork
           ls -la
           
   cook:
     name: cook rice
-    runs-on: ubuntu-latest
+    runs-on: dizzy-runner
     needs: greet
     steps:
       - name: check user info
         run: |
+          sudo useradd smartobi
           cat /etc/passwd
 
   Clean:
     name: clean house
-    runs-on: ubuntu-latest
+    runs-on: dizzy-runner
     needs: cook
     steps:
       - name: check home file
