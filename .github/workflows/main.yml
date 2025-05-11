@@ -18,3 +18,15 @@ jobs:
           hostnamectl
           mkdir smartwork
           ls -la
+          
+  cook:
+    name: cook rice
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check hostname
+        run: |
+          cat /etc/passwd
+
+  
+    
