@@ -1,26 +1,20 @@
-name: 'Basic Gitaction'
-
+name: Basic Gitaction
 
 on:
   push:
     branches: [ "main" ]
 
-
-
 permissions:
   contents: read
 
-
-
 jobs:
   greet:
-  	name: Greet Smart
-  	run-on: ubuntu-latest
-  	
-  	steps:
-      - name: check hostname
-      	run: |
+    name: Greet Smart
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check hostname
+        run: |
           hostnamectl
           mkdir smartwork
           ls -la
-		   
